@@ -1,3 +1,4 @@
+// The following method can be used for JSON file apis only (url ending in ".json"):
 $(document).ready(function () {
 
     $('#ajaxBtn').click(function () {
