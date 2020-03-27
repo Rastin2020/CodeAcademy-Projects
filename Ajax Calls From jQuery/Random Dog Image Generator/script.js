@@ -1,12 +1,10 @@
 $(document).ready(function () {
 
     $('#ajaxBtn').click(function () {
-        $.ajax('https://random.dog/woof.json',   // request url
+        $.ajax('https://dog.ceo/api/breeds/image/random',   // request url
             {
                 success: function (data, status, xhr) {    // success callback function
-                    if (data.url.endsWith(".png") || data.url.endsWith(".jpg") || data.url.endsWith(".jpeg") || data.url.endsWith(".JPG")) {
-                        $("img").attr("src", data.url);
-                    }
+                    $("img").attr("src", data.message);
                 }
             });
     });
